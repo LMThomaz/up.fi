@@ -24,9 +24,19 @@ export function CardList({ cards }: CardsProps): JSX.Element {
 
   return (
     <>
-      {/* TODO CARD GRID */}
+      <SimpleGrid gap={10} gridTemplateColumns="3">
+        {!!cards &&
+          cards.map(card => (
+            <Card
+              data={card}
+              viewImage={(url = '') => {
+                console.log(url);
+              }}
+            />
+          ))}
+      </SimpleGrid>
 
-      {/* TODO MODALVIEWIMAGE */}
+      {/* <ModalViewImage /> */}
     </>
   );
 }
