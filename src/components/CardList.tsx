@@ -28,6 +28,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
         {!!cards &&
           cards.map(card => (
             <Card
+              key={card.id}
               data={card}
               viewImage={(url = '') => {
                 console.log(url);

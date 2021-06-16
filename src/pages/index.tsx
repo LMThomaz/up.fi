@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
   } = useInfiniteQuery(
     'images',
     async ({ pageParam = null }) => {
-      const response = await api.get(`/api/images`, {
+      const response = await api.get(`images`, {
         params: {
           after: pageParam,
         },
@@ -47,16 +47,6 @@ export default function Home(): JSX.Element {
   if (isError) {
     <Error />;
   }
-
-  useEffect(() => {
-    async function teste(): Promise<void> {
-      const response = await fetch('D:/twitch/BreakLong.png');
-
-      console.log(response);
-    }
-
-    teste();
-  }, []);
 
   return (
     <>
