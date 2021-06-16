@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 import axios, { AxiosRequestConfig, CancelTokenSource } from 'axios';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import {
   useState,
   SetStateAction,
